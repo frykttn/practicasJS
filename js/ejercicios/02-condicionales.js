@@ -33,9 +33,8 @@ console.log(edad)
 //si la edad esta entre 0 o 110 años
 //&& AND
 // || OR
-
 if(edad > 0 &&  edad < 110){
-  if(edad >18) {
+  if(edad >=18) {
     alert('Sos mayor de edad');
 }else{
     alert('Sos menor de edad');

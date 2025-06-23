@@ -1,3 +1,8 @@
+/*Esto es un comentario de multiples lineas
+ */
+
+//crear una variable (let - const - var)
+
 let numero1;
 
 let anio = 2025
