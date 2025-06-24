@@ -37,12 +37,19 @@ switch (opcion) {
       document.writeln(
         `Depositaste $${deposito}, tu saldo actual es: $${saldo}`
       );
-    }else {
-        alert('Ingresaste un monto invalido')
+    } else {
+      alert("Ingresaste un monto invalido");
     }
 
     break;
   case "3":
+    const montoExtraer = parseFloat(prompt("Ingresa el monto a extraer"));
+    if(montoExtraer <= saldo){
+        saldo = saldo - montoExtraer;
+        document.writeln(`El monto a extraer es $${montoExtraer}, tu saldo actual es $${saldo}`)
+    }else{
+        alert('monto invalido')
+    }
     break;
   default:
     alert("Ingresaste una opcion erronea");
