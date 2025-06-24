@@ -26,6 +26,7 @@ const opcion = prompt(
 let saldo = 10000;
 
 switch (opcion) {
+  case "saldo":
   case "1":
     alert("su saldo es $" + saldo);
     break;
@@ -33,7 +34,7 @@ switch (opcion) {
     const deposito = parseFloat(prompt("Ingrese el monto que desea depositar"));
     if (deposito > 1000 && deposito <= 2000000) {
       console.log(deposito);
-      saldo = saldo + deposito;
+    saldo += deposito //saldo = saldo + deposito;
       document.writeln(
         `Depositaste $${deposito}, tu saldo actual es: $${saldo}`
       );
@@ -44,11 +45,13 @@ switch (opcion) {
     break;
   case "3":
     const montoExtraer = parseFloat(prompt("Ingresa el monto a extraer"));
-    if(montoExtraer <= saldo){
-        saldo = saldo - montoExtraer;
-        document.writeln(`El monto a extraer es $${montoExtraer}, tu saldo actual es $${saldo}`)
-    }else{
-        alert('monto invalido')
+    if (montoExtraer <= saldo) {
+      saldo = saldo - montoExtraer;
+      document.writeln(
+        `El monto a extraer es $${montoExtraer}, tu saldo actual es $${saldo}`
+      );
+    } else {
+      alert("monto invalido");
     }
     break;
   default:
