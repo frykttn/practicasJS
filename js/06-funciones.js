@@ -13,18 +13,20 @@ function saludarPersona(nombre, apellido){
 function mostrarCancion(nombreCancion){
     //todas las limeas de codigo que sabe hacer esta funcion
     const cancion = 'La cancion ingresada es: '+ nombreCancion
+    console.log(cancion)
     return cancion
 }
-
-
 //expresion de funcion
-const sumar = function(numero1, numero2){
-     //todas las lineas de codigo que sabe hacer esta funcion
-    document.writeln(`<p>Resultado: ${numero1 + numero2}</p>`)
+//const sumar =function (numero1, numero2){
+//   
+//   return numero1 + numero2
+//}
 
-}
 
 //arrow functions o funciones en forma de flecha
+const sumar = (numero1, numero2) => {
+    return numero1 + numero2
+}
 
 //llamar o invocar a la funcion
 saludar()
@@ -43,5 +45,7 @@ document.writeln(mostrarCancion('flaca'))
 const numero1 = parseInt(prompt('Ingresa un numero'))
 const numero2 = parseInt(prompt('Ingresa un segundo numero'))
 
-sumar(numero1, numero2)
-sumar(5, 20)
+const resultado = sumar(numero1, numero2)
+console.log(resultado)
+
+document.writeln(`<p>Resultado :${sumar(12, 5)}</p>`)
